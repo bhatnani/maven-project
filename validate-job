@@ -8,10 +8,10 @@ pipeline
    {
     steps {
 	
-	branch: 'master', 'url: "https://github.com/bhatnani/maven-project.git"'
+	git branch: 'master', url: 'https://github.com/bhatnani/maven-project'
 	}
 	
-	stage ('validat code')
+	stage ('validate code')
 {
 steps
 {
