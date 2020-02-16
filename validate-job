@@ -1,0 +1,15 @@
+pipeline
+{
+agent any
+stages
+{
+stage ('validat code')
+{
+steps
+{
+withMaven(jdk: 'localjdk - 1.8', maven: 'MyMaven')
+   sh 'mvn validate'
+}
+}
+}
+}
