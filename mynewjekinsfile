@@ -10,6 +10,16 @@ pipeline
 	
 	branch: 'master', 'url: "https://github.com/bhatnani/maven-project.git"'
 	}
+	
+	stage ('validat code')
+{
+steps
+{
+withMaven(jdk: 'localjdk - 1.8', maven: 'MyMaven')
+   sh 'mvn validate'
+   }
+   }
+	
  }
  }
 }
