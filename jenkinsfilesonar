@@ -9,7 +9,6 @@ steps{
 git branch: 'master', url: "https://github.com/bhatnani/maven-project.git"
 }
 }
-
 stage('sonar and maven package')
 {
 steps{
