@@ -5,6 +5,7 @@ stages
 {
 stage ('parallel deployment'){
 parallel{
+{
 stage ('print-windows')
 {
 steps
@@ -16,6 +17,7 @@ stage ('print-linux')
 steps
 {
 sh 'echo deploy to linux'
+}
 }
 }
 }
