@@ -6,7 +6,7 @@ stages
 stage ('deploy job to tomcat')
 {
 steps{
-sshagent(['']) {
+sshagent(['3fd1c625-16fc-48a5-9ce7-ce830a2863dd']) {
 sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/build_tomcat_job/webapp/target/webapp.war ec2-user@18.233.171.201:/var/lib/tomcat/webapps'
 }
 }
