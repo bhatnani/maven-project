@@ -1,0 +1,14 @@
+pipeline
+{
+agent any
+stages
+{
+stage ('deploy job to tomcat')
+{
+steps{
+sshagent(['cicd']) {
+sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/build_tomcat_job/webapp/target/webapp.war ec2-user@172.31.87.65:/var/lib/tomcat/webapps'
+}
+}
+}
+}
