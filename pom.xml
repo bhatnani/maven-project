@@ -104,6 +104,10 @@
             </plugin>
 
             <plugin>
+              <artifactId>maven-verifier-plugin</artifactId>
+            </plugin>
+                                
+            <plugin>
               <artifactId>maven-pmd-plugin</artifactId>
             </plugin>
 
