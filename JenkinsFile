@@ -8,4 +8,14 @@ stage ('scm checkout')
 steps
 {
 git branch: 'master', url: 'https://github.com/bhatnani/maven-project.git'
-}}}}
+}
+stage ('compile source code')
+{
+steps
+{
+withMaven(jdk: 'localjdk', maven: 'localmaven') {
+    sh 'mvn compile'
+}
+}
+}}}
+}
