@@ -6,6 +6,6 @@ node{
     sh label: '', script: 'mvn clean package'
   }
   stage('docker image build for maven artifact'){
-    sh label: '', script: 'docker build -t niks1988/mvn-artifact:1.0.0 .' 
+    sh label: '', script: 'docker build -t niks1988/mvn-artifact:1.0.0 /webapp/target/' 
   }
 }
