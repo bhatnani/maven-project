@@ -6,6 +6,6 @@ node{
     sh label: '', script: 'mvn clean package'
   }
   stage('docker image build for maven artifact'){
-    sh 'docker build -t niks1988/mvn-artifact:1.0.0 .' 
+    sh 'docker build -t niks1988/mvn-artifact:1.0.0 /var/lib/jenkins/workspace/docker-cicd-job/' 
   }
 }
